@@ -1,8 +1,8 @@
 [목차로 돌아가기](SocialWebProtocolsContents.md)
 
-## B. References
+## B. [참고 문헌 (References)](SocialWebProtocolsContents.md#목차-table-of-contents)
 
-### B.1 Informative references
+### B.1 [정보 참고 문헌 (Informative references)](#b-참고-문헌-references)
 
 #### [Accept-Post]
 
@@ -83,3 +83,5 @@
 #### [WebSub]
 
 - [*WebSub*](https://www.w3.org/TR/websub/). Julien Genestoux; Aaron Parecki. W3C. 3 October 2017. W3C Proposed Recommendation. URL: https://www.w3.org/TR/websub/ 
+
+[맨 위로](#b-참고-문헌-references)
