@@ -1,6 +1,7 @@
 [목차로 돌아가기](SocialWebProtocolsContents.md)
 
 # [Social Web Protocols](https://www.w3.org/TR/social-web-protocols/)
+
 <abbr title="World Wide Web Consortium">W3C</abbr> Working Group Note 25 December 2017
 
 **This version:**
@@ -28,6 +29,7 @@
 -----
 
 ## Abstract
+
 The Social Web Protocols are a collection of standards which enable various aspects of decentralised social interaction on the Web. This document describes the purposes of each, and how they fit together.
 
 ## Status of This Document
@@ -341,13 +343,13 @@ To make content available as ActivityStreams 2.0 JSON, one could do so directly 
 >
 >The [ActivityStreams 2.0 JSON-LD context](https://www.w3.org/ns/activitystreams#) (https://www.w3.org/ns/activitystreams#) aliases `@id` and `@type` to `id` and `type` respectively.
 
-**[[Activitypub](https://www.w3.org/TR/social-web-protocols/#bib-Activitypub)]** uses ActivityStreams 2.0 for all data, and also _extends_ ActivityStreams 2.0 with additional terms. Thus, ActivityPub requires responses to have the Content-Type `application/ld+json; profile="https://www.w3.org/ns/activitystreams"`. Publishers are however expected to also respect requests with the a`pplication/activity+json` Accept header.
+**[[Activitypub](https://www.w3.org/TR/social-web-protocols/#bib-Activitypub)]** uses ActivityStreams 2.0 for all data, and also _extends_ ActivityStreams 2.0 with additional terms. Thus, ActivityPub requires responses to have the Content-Type `application/ld+json; profile="https://www.w3.org/ns/activitystreams"`. Publishers are however expected to also respect requests with the `application/activity+json` Accept header.
 
 ### 3.1.1 Other ways of representing content
 
 If you don't like ActivityStreams 2.0, there are still some specifications you can use for particular tasks.
 
-[[LDN](https://www.w3.org/TR/social-web-protocols/#bib-LDN)] notification contents can use any vocabulary, so long as the data is available as JSON-LD. Thus notifications *MAY* use ActivityStreams 2.0, but don't have to.
+**[[LDN](https://www.w3.org/TR/social-web-protocols/#bib-LDN)]** notification contents can use any vocabulary, so long as the data is available as JSON-LD. Thus notifications *MAY* use ActivityStreams 2.0, but don't have to.
 
 **[[Micropub](https://www.w3.org/TR/social-web-protocols/#bib-Micropub)]** clients which expect to read data (this would usually be clients for _[updating](https://www.w3.org/TR/social-web-protocols/#updating)_) are expecting it as JSON in the parsed microformats2 syntax ([[microformats2-parsing](https://www.w3.org/TR/social-web-protocols/#bib-microformats2-parsing)]).
 
@@ -364,7 +366,8 @@ Each ActivityStreams 2.0 collection has a URL in the `id` property which returns
 Each [object](https://www.w3.org/TR/social-web-protocols/#objects) in a collection contains at least its URL (`id`), as well as optionally other properties of the object.
 
 Collections may represent changing streams of objects, or fixed sets. One [profile](https://www.w3.org/TR/social-web-protocols/#profiles) may be associated with one or more streams of content. Streams may be generated automatically or manually, and might be segregated by post type, topic, audience, or any arbitrary criteria decided by the curator of the stream. A profile may include links to multiple streams, which a consumer could follow to read or subscribe to.
-3.3.1 Special streams
+
+### 3.3.1 Special streams
 
 **[[Activitypub](https://www.w3.org/TR/social-web-protocols/#bib-Activitypub)]** specifies two streams that *MUST* be accessible from a profile via the following properties:
 
@@ -454,7 +457,7 @@ The publishing endpoint of **[[Activitypub](https://www.w3.org/TR/social-web-pro
 
 Side-effects of creating content with ActivityPub are for the most part adding things to various different collections collections (likes, follows, etc); but also include requirements about blocking users, and a hook to enable federated servers.
 
-The publishing endpoint for **[[Micropub](https://www.w3.org/TR/social-web-protocols/#bib-Micropub)]** is the `micropub` endpoint. Clients discover this from a profile URL via a `rel="micropub"` link (in an HTTP `Link` header, or an HTML `<link>` element). Clients make a `x-www-form-urlencoded` POST request containing the key-value pairs for the attributes of the object being created. The URL of the created resource is generated at the discretion of the server, and returned in the `Location` HTTP header. Clients and servers must support attributes from the Microformats2 [[h-entry](https://www.w3.org/TR/social-web-protocols/#bib-h-entry)] vocabulary. Micropub also defines four reserved attributes (`access_token`, h, `action` and `url`) as well as reserves any attribute prefixed with `mp-`; these are used as commands to the server. Any additional key names sent outside of these vocabularies may be ignored by the server.
+The publishing endpoint for **[[Micropub](https://www.w3.org/TR/social-web-protocols/#bib-Micropub)]** is the `micropub` endpoint. Clients discover this from a profile URL via a `rel="micropub"` link (in an HTTP `Link` header, or an HTML `<link>` element). Clients make a `x-www-form-urlencoded` POST request containing the key-value pairs for the attributes of the object being created. The URL of the created resource is generated at the discretion of the server, and returned in the `Location` HTTP header. Clients and servers must support attributes from the Microformats2 [[h-entry](https://www.w3.org/TR/social-web-protocols/#bib-h-entry)] vocabulary. Micropub also defines four reserved attributes (`access_token`, `h`, `action` and `url`) as well as reserves any attribute prefixed with `mp-`; these are used as commands to the server. Any additional key names sent outside of these vocabularies may be ignored by the server.
 
 Micropub requests may alternatively be sent as a JSON payload, the syntax of which is derived from [[microformats2-parsing](https://www.w3.org/TR/social-web-protocols/#bib-microformats2-parsing)].
 
@@ -470,7 +473,7 @@ Content is updated when a client sends changes to attributes (additions, removal
 
 **[[Activitypub](https://www.w3.org/TR/social-web-protocols/#bib-Activitypub)]** clients send an HTTP `POST` request to the `outbox` containing an ActivityStreams 2.0 `Update` activity. The `object` of the activity is an existing object, including its `id`, and the fields to update should be nested. If a partial representation of an object is sent, omitted fields are _not_ deleted by the server. In order to delete specific fields, the client can assign them a `null` value.
 
-In the case of ActivityPub federated servers, updates should be propagated to the `inbox`es of recipients of the original objects. However, when a federated server passes an `Update` activity to another server's `inbox`, the recipient must assume this is the complete object to be replaced; partial updates are not performed server-to-server.
+In the case of ActivityPub federated servers, updates should be propagated to the `inbox`es of recipients of the original objects. However, when a federated server passes an `Update` activity to another server's `inbox`, the recipient must assume this is the _complete_ object to be replaced; partial updates are not performed server-to-server.
 
 An `Undo` with the `object` of the previous `Update` can be used to revert changes.
 
@@ -494,7 +497,7 @@ As with [updating](https://www.w3.org/TR/social-web-protocols/#updating), server
 
 ## 5. Subscribing
 
-An agent (client or server) may ask to be notified of changes to a content object (eg. edits, new replies) or stream of content (eg. objects added or removed from a particular stream). This is subscribing. Specifications which contain subscription mechanisms are ActivityPub and WebSub.
+An agent (client or server) may ask to be notified of changes to a content object (eg. edits, new replies) or stream of content (eg. objects added or removed from a particular stream). This is _subscribing_. Specifications which contain subscription mechanisms are ActivityPub and WebSub.
 
 >Note: Subscription vs delivery
 >
