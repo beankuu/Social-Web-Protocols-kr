@@ -15,7 +15,7 @@
 - 2.2 [정의 (Definitions)](SocialWebProtocolsChapter2.md#22-정의-definitions)
 - 2.3 [규격 (Specifications)](SocialWebProtocolsChapter2.md#23-규격-specifications)
   - 2.3.1 [요구사항 (Requirements)](SocialWebProtocolsChapter2.md#231-요구사항-requirements)
-  - 2.3.2 [이 사양들은 서로 어떤 관계가 있을까요? (How do these specifications relate to each other?)](SocialWebProtocolsChapter2.md#232-이-사양들은-서로-어떤-관계가-있을까요-how-do-these-specifications-relate-to-each-other)
+  - 2.3.2 [이 규격들은 서로 어떤 관계가 있을까요? (How do these specifications relate to each other?)](SocialWebProtocolsChapter2.md#232-이-규격들은-서로-어떤-관계가-있을까요-how-do-these-specifications-relate-to-each-other)
 
 3\. [읽기 (Reading)](SocialWebProtocolsChapter3.md#3-읽기-reading)
 
@@ -40,12 +40,12 @@
 6\. [전달 (Delivery)](SocialWebProtocolsChapter6.md#6-전달-delivery)
 
 - 6.1 [타겟팅과 발견 (Targeting and discovery)](SocialWebProtocolsChapter6.md#61-타겟팅과-발견-targeting-and-discovery)
-- 6.2 [일반 알림 (Generic notifications)](SocialWebProtocolsChapter6.md#62-일반-알림-generic-notifications)
+- 6.2 [일반적인 알림 (Generic notifications)](SocialWebProtocolsChapter6.md#62-일반적인-알림-generic-notifications)
 - 6.3 [액티비티 알림 (Activity notifications)](SocialWebProtocolsChapter6.md#63-액티비티-알림-activity-notifications)
 - 6.4 [멘션 (Mentioning)](SocialWebProtocolsChapter6.md#64-멘션-mentioning)
   - 6.4.1 [업데이트와 삭제 (Updates and deletes)](SocialWebProtocolsChapter6.md#641-업데이트와-삭제-updates-and-deletes)
 - 6.5 [전달 상호 운용성 (Delivery interop)](SocialWebProtocolsChapter6.md#65-전달-상호-운용성-delivery-interop)
-  - 6.5.1 [AS2 / ActivityPub로 Webmention (Webmention as AS2 / ActivityPub)](SocialWebProtocolsChapter6.md#651-as2--activitypub로-webmention-webmention-as-as2--activitypub)
+  - 6.5.1 [Webmention을 AS2 / ActivityPub로 (Webmention as AS2 / ActivityPub)](SocialWebProtocolsChapter6.md#651-webmention을-as2--activitypub로-webmention-as-as2--activitypub)
   - 6.5.2 [LDN 에서 Webmention로 (LDN to Webmention)](SocialWebProtocolsChapter6.md#652-ldn-에서-webmention로-ldn-to-webmention)
   - 6.5.3 [Webmention 에서 LDN로 (Webmention to LDN)](SocialWebProtocolsChapter6.md#653-webmention-에서-ldn로-webmention-to-ldn)
 
