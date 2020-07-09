@@ -8,26 +8,42 @@
 ## 1. 번역 단어관련
 
 - 번역하면서 자주 등장하고 오역이 흔했던 단어들 위주로 작성하였습니다.
+- 다음 번역은 번역시 작성한 참고사항 표 이며, 절대적인 번역 기준이 아닙니다.
 
-### 1.1 단어 전체를 번역
+번역방식
 
-원문 | 번역 | 비고
--- | -- | --
+- 원문
+- 음차
+- 번역
+- 원문/한글 혼용
 
-### 1.2 음차를 사용하는 번역
-
-원문 | 번역 | 비고
--- | -- | --
-
-### 1.3 원문 그대로 사용하는 번역
-
-원문 | 비고
--- | --
-
-### 1.4 원문과 번역본을 혼용해 사용하는 번역
-
-원문 | 번역 |  비고
--- | -- | --
+원문 | 번역방식 | 번역 | 챕터 | 비고
+-- | -- | -- | -- | --
+Social Web | 원문 | | Intro
+Section | 음차 | 섹션 | Intro
+Specifications | 번역 | 규격? 명세서? | Contents
+targeting | 음차 | 타겟팅 | Contents
+Notes | 번역, 음차 | 참고사항, 노트 | 1
+Social Web Community Group | 원문 | | 1
+payload | 음차 | 페이로드 | 2
+endpoint | 음차 | 엔드포인트 | 2, 7
+bridge | 음차 | 브릿지 | 2
+type(s) | 번역, 음차 | 유형, 타입 | 2
+application | 음차 | 어플리케이션 | 3
+Content-Type | 원문 | | 3 | Content-Type 헤더
+actor | 음차 | 액터 | 3
+content | 번역, 음차 | 내용, 컨텐츠 | 3
+return | 번역 | 반환 | 3
+content types | 음차 | 컨텐츠 타입 | 3
+application | 음차 | 어플리케이션 | 6
+entity | 번역 | 엔티티 | 7
+subject | 번역 | 주제, 대상, 수신자, ... | 7
+activity | 음차 | 액티비티 | 7
+semantic | 음차 | 시맨틱 | 7
+charter | 번역 | 헌장 | 2,8 
+Webmention | 원문 | | 8
+WebSub | 원문 | | 8
+Web Annotation Protocol | 원문 | | 8
 
 ## 2. 번역 일관성
 
